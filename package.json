@@ -1,14 +1,14 @@
 {
   "name": "create-guilded",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A cli to get you started with a development environment for TouchGuild",
-  "main": "/bin/index.js",
+  "main": "./bin/index.js",
   "bin": {
-    "create-guilded-app": "/bin/index.js"
+    "create-guilded": "./bin/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/myferr/guild-cli.git"
+    "url": "https://github.com/myferr/create-guilded.git"
   },
   "keywords": [
     "cli",
@@ -19,11 +19,12 @@
   "author": "myferr <https://github.com/myferr>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/myferr/guild-cli/issues"
+    "url": "https://github.com/myferr/create-guilded/issues"
   },
-  "homepage": "https://github.com/myferr/guild-cli#readme",
+  "homepage": "https://github.com/myferr/create-guilded#readme",
   "dependencies": {
     "chalk": "4.1.2",
+    "create-guilded": "^1.0.1",
     "figlet": "^1.7.0",
     "fs-extra": "^11.2.0",
     "gradient-string": "^2.0.2",
