@@ -5,6 +5,5 @@
 `create-guilded` is a command-line interface tool built with JavaScript to set you up with a [TouchGuild](https://touchguild.com) development environment.
 
 ```sh
-npm install -g create-guilded
 npm create guilded
 ```
