@@ -6,5 +6,4 @@
 
 ```sh
 npm create guilded
-``
 ```
