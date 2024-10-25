@@ -5,39 +5,23 @@ const path = require("path");
 const chalk = require("chalk");
 const inquirer = require("inquirer");
 const gradient = require("gradient-string");
-const fs = require("./fs");
+const fs = require("./fs.js");
 
 const simpleGit = require("simple-git");
 const ora = require("ora");
-const { execSync } = require("child_process");
 
 const git = simpleGit();
 
 async function Make(lang, name) {
-  try {
-    switch (lang) {
-      case "JavaScript":
-        await init(name);
-        break;
-
-      case "TypeScript":
-        console.log(
-          `\n${chalk.blue.bold("TypeScript")} is not yet supported.\n`
-        );
-      default:
-        break;
-    }
-  } catch (error) {
-    console.log(`${chalk.red.bold("An unexpected error occured.")}\n${error}`);
-  }
-}
-
-async function init(name) {
+  const language = lang.toLowerCase();
   try {
     const targetDir = path.join(process.cwd(), name);
     const makeTemplate = ora("Initializing project..").start();
     await git
-      .clone("https://github.com/myferr/create-guilded-template.git", targetDir)
+      .clone(
+        `https://github.com/myferr/create-guilded-template-${language}.git`,
+        targetDir
+      )
       .then(() => {
         makeTemplate.succeed("Project successfully initialized.");
       });
@@ -65,7 +49,6 @@ async function init(name) {
     console.log(`${chalk.red.bold("An unexpected error occurred.")}\n${error}`);
   }
 }
-
 const Welcome = async () => {
   console.log("\n");
   console.log(
