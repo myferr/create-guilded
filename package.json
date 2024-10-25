@@ -1,6 +1,6 @@
 {
   "name": "create-guilded",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A cli to get you started with a development environment for TouchGuild",
   "main": "./bin/index.js",
   "bin": {
